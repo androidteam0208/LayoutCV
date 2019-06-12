@@ -260,6 +260,7 @@ p {
     position: relative;
     width: 100%;
     overflow: hidden;
+    
     /* padding-top: 75px; */
     }
 .home .carousel-inner .item {
@@ -1581,4 +1582,15 @@ span.divider.bottom {
     }
     
  }
+ @keyframes faseInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
  
