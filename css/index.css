@@ -967,6 +967,7 @@ article {
     float: left;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     position: relative;
+    overflow: hidden;
 
 }
 .work__item .item__right{
@@ -981,6 +982,42 @@ article {
 .work__item .item__left img{
     display: block;
     width: 100%;
+    transition:all 1s;
+}
+.work__item .item__left .left__cover{
+    width: 150px;
+    height: 100%;
+    line-height: 210px;
+    background-color: rgba(1, 183, 255, 0.692);
+    text-align: center;
+    transition:all 0.5s;
+    position: absolute;
+    top: 210px
+    
+    
+}
+.work__item .item__left .left__cover p{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border:3px solid white;
+    border-radius: 50%;
+    margin: 0 auto;
+    font-size: 27px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.work__item .item__left .left__cover p:hover{
+    border:3px solid rgb(10, 10, 10);
+    color: black;
+
+}
+.work__item .item__left:hover .left__cover {
+    top: 0;   
+}
+.work__item .item__left:hover img{
+    width: 120%;
 }
 
 .work .work__item::after {
@@ -995,6 +1032,12 @@ article {
     box-shadow: 0px 5px 0px #b6b5b5;
     z-index: -1;
 }
+@media only screen and ( max-width: 1200px ) {
+    .work {
+        min-height: 1747px;
+    }
+ }
+
 /* responsive */
 @media only screen and ( max-width: 992px ) {
    .work .work__grid {
@@ -1376,6 +1419,42 @@ ul.check li {
     font-size: 1.8em;
     text-transform: uppercase;
 }
+.numbers {
+    position: relative 
+}
+
+.mbYTP_wrapper{
+    position: absolute; 
+    z-index: 0; 
+    min-width: 100%;
+    min-height: 100%; 
+    left: 0px; 
+    top: 0px; 
+    overflow: hidden; 
+    opacity: 1;
+    backface-visibility: hidden;
+    transition-property: opacity; 
+    transition-duration: 2000ms;
+}
+.playerBox{
+    position: absolute; 
+    z-index: 0;
+    width: 1883.56px; 
+    height: 1140px; 
+    top: 0px; 
+    left: 0px;
+    overflow: hidden; 
+    opacity: 1; 
+    margin-top: -380px; 
+    margin-left: -182.28px;
+}
+.YTPOverlay{
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    width: 100%; 
+    height: 100%;
+}
 /* my custommer  */
 .plans {
     background-color: #fff;
@@ -1404,7 +1483,8 @@ ul.check li {
 .plans .brands {
     display: inline-block;
     margin: 0 15px 20px 15px;
-    width: 200px;
+    width: 165px;
+   
 }
 
 /* responsive */
@@ -1582,15 +1662,15 @@ span.divider.bottom {
     }
     
  }
- @keyframes faseInLeft{
+ @keyframes faseInUp{
     0%{
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateY(100px);
 
     }
     100%{
         opacity: 1;
-        transform: translateX(0px)
+        transform: translateY(0px)
     }
 }
  
